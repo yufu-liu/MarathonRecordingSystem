@@ -1,4 +1,12 @@
-# Marathon System
+# Marathon Recording System
+## Features
+1. APIs for initiating marathons, racers, checkpoints, final results.
+2. Tables for marathon, racers, stations, checkpoints of each stations and racers, a summary.
+3. Package this service with Docker for deployment. 
+
+## Note
+This repository focus on backend service (Django and MySQL), if you want to know more about the whole system or frontend (PC and RFID).
+- For more details:
 > reference : [HackMD](https://hackmd.io/8wvVDF9RQVaYyxSAl-8O_w?both)
 
 ## How to construct a backend service (Django + MySQL) with Docker
