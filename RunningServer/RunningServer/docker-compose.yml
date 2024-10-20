@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: .  # This is the directory where your Dockerfile and other files are located
+      dockerfile: marathon_backend.dockerfile  # Explicitly specify your renamed Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=RunnerDB
+      - DB_USER=root
+      - DB_PASSWORD=Ai74251213!
+    restart: always
+
+  db:
+    image: mysql:8.0
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: RunnerDB
+      MYSQL_ROOT_PASSWORD: Ai74251213!  # Only use this for root password
+    restart: always
+
+volumes:
+  mysql_data:
