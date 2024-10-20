@@ -5,7 +5,7 @@
 3. Package this service with Docker for deployment. 
 
 ## Note
-This repository focus on backend service (Django and MySQL), if you want to know more about the whole system or frontend (PC and RFID).
+This repository focus on backend service (Django and MySQL), if you want to know more about the whole system or frontend (local PC and RFID).
 - For more details:
 > reference : [HackMD](https://hackmd.io/8wvVDF9RQVaYyxSAl-8O_w?both)
 
@@ -25,7 +25,7 @@ docker-compose exec web python manage.py migrate
 Step 5. Stop the Services
 docker-compose down
 
-If you need to view or modify the database directly, they can connect to the MySQL container from the terminal using the following command:
+- If you need to view or modify the database directly, they can connect to the MySQL container from the terminal using the following command:
 docker-compose exec db mysql -u root -p
 
 
